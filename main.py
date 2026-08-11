@@ -1,19 +1,30 @@
 from pokemonfunctions import get_pokemon_info, get_pokemon_stats, compare_pokemons, pokemon_battle
 from pokemonapi import get_data
-from design import topdisplay, pikachu_logo, menuchoices, searching, designstats
+from design import topdisplay, pikachu_logo, menuchoices, searching, designstats, goback
 import time
 
 def main():
     topdisplay()
     pikachu_logo()
+    print("Hello trainer! You have 5 choices to interact with.")
+    print("You will be ask to choose a number in order to interact with the game.")
+    print("Choose wisely ;)")
+    print()
+    
+    
 
 
     while True:
+        print()
         menuchoices()
 
-        user = input("Choose a number to begin with the program: ")
+        user = input("Choose a number: ")
 
+        # CLARIFYING DONE
         if user == "1":
+            print("---------Choose only ONE pokemon to get its information---------".center(45))
+            print()
+
             user_choice = input("What Pokemon would you like to choose? ")
             print()
 
@@ -33,7 +44,15 @@ def main():
             print(f"Type: {result["type"]}")
             print("#" * 45)
 
+
+            input("\nPress Enter to return to the main menu:")
+            
+
+        #CLARIFYING DONE
         elif user == "2":
+            print("---------Choose only ONE pokemon to get its stats---------".center(45))
+            print()
+
             user_choice = input("What Pokemon would you like to choose? ")
             print()
 
@@ -54,7 +73,13 @@ def main():
             print(f"Defense: {result["defense"]}")
             print("#" * 45)
 
+            input("\nPress Enter to return to the main menu:")
+
+        # CLARIFYING DONE
         elif user == "3":
+            print("---------Choose only TWO pokemons to get their stats---------".center(45))
+            print()
+
             print("Choose 2 Pokemon to compare their stats:")
             print()
 
@@ -93,9 +118,12 @@ def main():
             print("#" * 45)
             print()
 
+            input("\nPress Enter to return to the main menu:")
             
-
+        # CLARIFYING DONE
         elif user == "4":
+            print("---------Choose only ONE pokemon---------".center(45))
+            print()
 
             print("You will fight against a CPU.")
             user_choice = input("Choose your Pokemon: ")
@@ -115,8 +143,11 @@ def main():
             
             print(result)
 
+            input("\nPress Enter to return to the main menu:")
+
         elif user == "5":
             print("Thank you for playing!")
+            pikachu_logo()
             break
 
         else:
@@ -124,5 +155,15 @@ def main():
 
 main()
 
-## finish the desing for step 4 and 5
-# finish requierments and should be done by monday
+#layout is good -- 
+# Tuesday: -- 
+# for number 5 be descriptive regarding how this game is played  -- 
+# fix the going back aspect, a bit sloppy -- 
+
+# Wednesday:
+# fix the diff unit cases that can be encountered from steps 1- 4
+# tidy up extra spaces and indents
+# fix stats, info style like {pokemon}'s info and vice versa 1 - 3
+# tify up the goodbye section
+# i feel that function goback can be deleted
+# Ready to be deployed

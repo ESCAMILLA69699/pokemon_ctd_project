@@ -30,8 +30,8 @@ def topdisplay():
 
 
 def menuchoices():
-     print("Hello trainer! You have 5 choices to interact with. Choose wise ;)")
-     print()
+     
+     
 
      print("*" * 45)
      print("Main Menu".center(40))
@@ -61,7 +61,17 @@ def designstats(user_choice):
     print("------".center(45))
     print()
 
+def battlemenu():
+    print("*" * 45)
+    print("BATTLE".center(45))
+    print("*" * 45)
+
 #topdisplay()
 #pikachu_logo()
 #print(menuchoices())
-#print(searching("pikachu"))
+#print(searching("pikachu"))\
+
+
+def goback(userchoice):
+    print("Once ready to go back to the main menu, press Y")
+    return userchoice
