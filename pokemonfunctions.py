@@ -31,6 +31,7 @@ def get_pokemon_name(name):
 # Try/except for only name and no other things
 # Useful for option 1 
 def get_pokemon_info(name):
+    
     pokemon = get_data(name)
     
     if pokemon is None:

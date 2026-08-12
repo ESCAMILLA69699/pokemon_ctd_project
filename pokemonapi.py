@@ -11,16 +11,28 @@ import requests
 BASE_URL = "https://pokeapi.co/api/v2"
 
 def get_data(name):
+
+
     poke_url = f"{BASE_URL}/pokemon/{name}"
-    response = requests.get(poke_url)
 
-    if response.status_code == 200:
+
+    try:
+        response = requests.get(poke_url)
+        if response.status_code == 200:
         ## IF POKEMON CAN BE FOUND IN THE API, then it'll return as code 200
-        return response.json()
-    else:
+            return response.json()
+        elif response.status_code == 404:
         ## OTHERWISE, as code 404 (not found)
-        print(f"UH OH, something went wrong: {response.status_code}")
+            print(f"UH OH, pokemon not found: {response.status_code}")
+            print("Please try again: ")
+            return None
+        else:
+            print(f"Something went wrong: {response.status_code}")
+            return None
 
+    except TabError:
+        print("Please check your whitespaces")
+        return None
 
 #get_data("pikachu")
 #get_data("squirtle")

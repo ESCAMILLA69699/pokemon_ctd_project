@@ -48,11 +48,17 @@ def menuchoices():
      print("5. Exit")
      print()
 
-def searching(user_choice):
+def searching(user_choice, result):
     print("Searching for Pokémon...")
     time.sleep(1)
-    print(f"{user_choice.capitalize()} found!")
-    print()
+
+    if result is None:
+        print(f"{user_choice.capitalize()} was not found!")
+        return False
+    else:
+        print(f"{user_choice.capitalize()} found!")
+        print()
+        return True
 
 
 def designstats(user_choice):
@@ -72,6 +78,3 @@ def battlemenu():
 #print(searching("pikachu"))\
 
 
-def goback(userchoice):
-    print("Once ready to go back to the main menu, press Y")
-    return userchoice
