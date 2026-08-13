@@ -1,6 +1,6 @@
 from pokemonfunctions import get_pokemon_info, get_pokemon_stats, compare_pokemons, pokemon_battle
 from pokemonapi import get_data
-from design import topdisplay, pikachu_logo, menuchoices, searching, designstats
+from design import topdisplay, pikachu_logo, menuchoices, searching, designstats, rules
 import time
 
 def main():
@@ -10,8 +10,10 @@ def main():
     print("You will be ask to choose a number in order to interact with the game.")
     print("Choose wisely ;)")
     print()
+    rules()
+    print()
     
-    
+    # i can reduce this to one function
 
 
     while True:
@@ -55,6 +57,9 @@ def main():
            
 
                 time.sleep(.5)
+                print("----INFORMATION----".center(45))
+                print()
+                time.sleep(.5)
                 print(f"Name: {result["name"]}")
                 time.sleep(.5)
                 print(f"Height: {result["height"]}")
@@ -88,7 +93,7 @@ def main():
                     continue
 
                 designstats(user_choice)
-                print("STATS =")
+                print("----STATS----".center(45))
                 print()
                 time.sleep(.5)
                 print(f"HP: {result["hp"]}")
@@ -129,6 +134,7 @@ def main():
                 designstats(user_choice1)
 
                 time.sleep(.5)
+                print("----STATS----".center(45))
                 print(f"HP: {result["pokemon1"]["hp"]}")
                 time.sleep(.5)
                 print(f"Attack: {result["pokemon1"]["attack"]}")
@@ -142,6 +148,7 @@ def main():
                 print()
                 designstats(user_choice2)
                 time.sleep(.5)
+                print("----STATS----".center(45))
                 print(f"HP: {result["pokemon2"]["hp"]}")
                 time.sleep(.5)
                 print(f"Attack: {result["pokemon2"]["attack"]}")
@@ -184,8 +191,15 @@ def main():
                 break
 
         elif user is 5:
-            print("Thank you for playing!")
+            print("Thank you for playing, trainer!".center(45))
+            time.sleep(.5)
+            print()
+            print("WAITTTTT... someone wants to say bye".center(45))
+            time.sleep(.5)
             pikachu_logo()
+            print()
+            print("Pikachu wants to wish you a safe trip!".center(45))
+            print("BYE NOW!".center(45))
             break
 
         else:
@@ -195,10 +209,11 @@ main()
 
 
 
-# Wednesday:
-# fix the diff unit cases that can be encountered from steps 1- 4 -- good, now lets say they wrote a bad pokemon2
-# tidy up extra spaces and indents
-# fix stats, info style like {pokemon}'s info and vice versa 1 - 3
-# tify up the goodbye section
-# i feel that function goback can be deleted
-# Ready to be deployed
+
+
+# THURSDAY:
+# FIX OPTION 3 AND 4
+# FIX GOODBYE SECTION - 
+# RULES - 
+# FIX UP FUNCTIONS
+# ADD REQUIREMTNS AND READ ME

@@ -72,6 +72,23 @@ def battlemenu():
     print("BATTLE".center(45))
     print("*" * 45)
 
+def rules():
+    print("*" * 45)
+    print
+    print("Before starting, here are the rules:".center(45))
+    print()
+    print("1. Don't pick any Intengers when prompted for a pokemon name-")
+    print("   due to API structure.")
+    print()
+    print("2. Stay within the Intenger range (1 through 5).")
+    print()
+    print("3. If pokemon isn't found, it might not be your fault due to the -")
+    print("   API or check your spelling.")
+    print()
+    print("*" * 45)
+
+print(rules())
+
 #topdisplay()
 #pikachu_logo()
 #print(menuchoices())
