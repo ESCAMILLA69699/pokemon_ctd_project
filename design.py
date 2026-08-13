@@ -87,7 +87,7 @@ def rules():
     print()
     print("*" * 45)
 
-print(rules())
+#print(rules())
 
 #topdisplay()
 #pikachu_logo()
@@ -95,3 +95,15 @@ print(rules())
 #print(searching("pikachu"))\
 
 
+# JUST TO REDUCE CODE LINE IN MAIN
+def outputtop():
+    topdisplay()
+    pikachu_logo()
+    print("Hello trainer! You have 5 choices to interact with.")
+    print("You will be ask to choose a number in order to interact with the game.")
+    print("Choose wisely ;)")
+    print()
+    rules()
+    print()
+
+print(outputtop())

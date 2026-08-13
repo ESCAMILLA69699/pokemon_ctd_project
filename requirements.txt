@@ -1,0 +1,8 @@
+### Requirements
+
+- Python 3
+- `requests` package installed
+
+```bash
+pip install requests
+

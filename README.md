@@ -41,18 +41,18 @@ python main.py
 The program includes five main options:
 
 1. **Pokemon Information**
-   - Search for a Pokemon and display its name, height, weight, and type.
+   * Search for a Pokemon and display its name, height, weight, and type.
 
 2. **Pokemon Stats**
-   - Search for a Pokemon and display its HP, attack, and defense.
+   * Search for a Pokemon and display its HP, attack, and defense.
 
 3. **Compare Pokemon**
-   - Compare the HP, attack, and defense of two different Pokemon.
+   * Compare the HP, attack, and defense of two different Pokemon.
 
 4. **Pokemon Battle**
-   - Choose a Pokemon and battle against a randomly selected computer Pokemon.
-   - The `pokemonbattle()` function selects the computer's random Pokemon and prepares the battle.
-   - The `pokemonrumble()` function handles the actual fight by calculating the Pokemon's total HP (defense + HP), determining who attacks first, and continuing the battle until there is a winner.
+   * Choose a Pokemon and battle against a randomly selected computer Pokemon.
+   * The `pokemonbattle()` function selects the computer's random Pokemon and prepares the battle.
+   * The `pokemonrumble()` function handles the actual fight by calculating the Pokemon's total HP (defense + HP), determining who attacks first, and continuing the battle until there is a winner.
 
 
 ## Credits

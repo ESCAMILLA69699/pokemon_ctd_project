@@ -1,17 +1,10 @@
 from pokemonfunctions import get_pokemon_info, get_pokemon_stats, compare_pokemons, pokemon_battle
 from pokemonapi import get_data
-from design import topdisplay, pikachu_logo, menuchoices, searching, designstats, rules
+from design import topdisplay, pikachu_logo, menuchoices, searching, designstats, rules, outputtop
 import time
 
 def main():
-    topdisplay()
-    pikachu_logo()
-    print("Hello trainer! You have 5 choices to interact with.")
-    print("You will be ask to choose a number in order to interact with the game.")
-    print("Choose wisely ;)")
-    print()
-    rules()
-    print()
+    outputtop()
     
     # i can reduce this to one function
 
@@ -216,4 +209,6 @@ main()
 # FIX GOODBYE SECTION - 
 # RULES - 
 # FIX UP FUNCTIONS
-# ADD REQUIREMTNS AND READ ME
+# ADD REQUIREMTNS 
+# ADD READ ME -
+# FIX READ ME 
