@@ -4,9 +4,10 @@ from design import topdisplay, pikachu_logo, menuchoices, searching, designstats
 import time
 
 
-outputtop()
+
 
 def main():
+    outputtop()
    
 
     while True:
@@ -202,13 +203,5 @@ def main():
         else:
             print("Invalid choice. Please choose 1-5.")
 
-main()
-
-
-
-
-
-# THURSDAY:
-# FIX OPTION 3 AND 4
-# FIX UP FUNCTIONS
-# FIX UP IMPORT FROM DESIGN.PY to see who not to use 
+if __name__ == "__main__":
+    main()
