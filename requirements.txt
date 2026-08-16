@@ -1,8 +1,6 @@
 ### Requirements
 
 - Python 3
-- `requests` package installed
+- request` package installed
 
-```bash
-pip install requests
 

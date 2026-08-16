@@ -3,11 +3,11 @@ from pokemonapi import get_data
 from design import topdisplay, pikachu_logo, menuchoices, searching, designstats, rules, outputtop
 import time
 
-def main():
-    outputtop()
-    
-    # i can reduce this to one function
 
+outputtop()
+
+def main():
+   
 
     while True:
         print()
@@ -31,7 +31,7 @@ def main():
 
         # CLARIFYING DONE
         
-        if user is 1:
+        if user == 1:
             while True:
                 print("---------Choose only ONE pokemon to get its information---------".center(45))
                 print()
@@ -68,7 +68,7 @@ def main():
             
 
         #CLARIFYING DONE
-        elif user is 2:
+        elif user == 2:
             while True:
 
                 print("---------Choose only ONE pokemon to get its stats---------".center(45))
@@ -100,7 +100,7 @@ def main():
                 break
 
         # CLARIFYING DONE
-        elif user is 3:
+        elif user == 3:
             while True:
 
                 print("---------Choose only TWO pokemons to get their stats---------".center(45))
@@ -155,35 +155,39 @@ def main():
                 break
             
         # CLARIFYING DONE
-        elif user is 4:
+        elif user == 4:
             while True:
                 print("---------Choose only ONE pokemon---------".center(45))
                 print()
 
                 print("You will fight against a CPU.")
+                print("HP is determined by HP + defense. Keep that in mind!")
                 user_choice = input("Choose your Pokemon: ")
 
                 print()
-                print()
+
+                result = get_data(user_choice)
+                
+                if searching(user_choice, result) == False:
+                    print()
+                    continue
 
 
                 print("*" * 45)
                 print("BATTLE".center(45))
             
                 print()
-            
-                result = pokemon_battle(user_choice)
 
-                if searching(user_choice, result) == False:
-                     print()
-                     continue
+                pokemon_battle(user_choice)
             
-                print(result)
+               
+            
+                
 
                 input("\nPress Enter to return to the main menu:")
                 break
 
-        elif user is 5:
+        elif user == 5:
             print("Thank you for playing, trainer!".center(45))
             time.sleep(.5)
             print()
@@ -206,9 +210,5 @@ main()
 
 # THURSDAY:
 # FIX OPTION 3 AND 4
-# FIX GOODBYE SECTION - 
-# RULES - 
 # FIX UP FUNCTIONS
-# ADD REQUIREMTNS 
-# ADD READ ME -
-# FIX READ ME 
+# FIX UP IMPORT FROM DESIGN.PY to see who not to use 

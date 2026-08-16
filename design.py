@@ -105,5 +105,3 @@ def outputtop():
     print()
     rules()
     print()
-
-print(outputtop())
