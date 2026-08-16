@@ -30,9 +30,6 @@ def topdisplay():
 
 
 def menuchoices():
-     
-     
-
      print("*" * 45)
      print("Main Menu".center(40))
      print("*" * 45)

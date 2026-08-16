@@ -13,7 +13,7 @@ import time
 # 1. get info of a pokemon (only 1 can be chosen) #// get_pokemon_info(name):
 # 2. Get pokemon stats (only 1 can be chosen) #// get_pokemon_stats(name):
 # 3. Compare pokemon stats (between 2 pokemons) #// compare_pokemons(name1, name2):
-# 4. fight - mini game (Choose 2) or let computer choose like a 1v1 #/ pokemon_battle(name1):
+# 4. fight - mini game let computer choose like a 1v1 #/ pokemon_battle(name1):
 # 5. EXIT
 
 #basic function
@@ -23,6 +23,7 @@ def get_pokemon_name(name):
 
     if pokemon is None:
         return None
+    
     else:
         return pokemon["name"]
 
